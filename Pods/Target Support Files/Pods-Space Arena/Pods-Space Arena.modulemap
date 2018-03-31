@@ -1,0 +1,6 @@
+framework module Pods_Space_Arena {
+  umbrella header "Pods-Space Arena-umbrella.h"
+
+  export *
+  module * { export * }
+}

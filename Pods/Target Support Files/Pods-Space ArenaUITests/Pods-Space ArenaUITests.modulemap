@@ -1,0 +1,6 @@
+framework module Pods_Space_ArenaUITests {
+  umbrella header "Pods-Space ArenaUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

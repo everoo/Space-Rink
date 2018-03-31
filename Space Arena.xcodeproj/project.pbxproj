@@ -1,0 +1,913 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		19F42BC401EB73E465BB4775 /* Pods_Space_ArenaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2532C38ADA1B967684004778 /* Pods_Space_ArenaUITests.framework */; };
+		3E0268C19304A2D1CD39ADBB /* Pods_Space_Arena.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F92CAE25B85CF9AEA87B3B1 /* Pods_Space_Arena.framework */; };
+		3E553590206C23760040D10D /* SettingsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E55358F206C23760040D10D /* SettingsScene.swift */; };
+		3E553592206C23950040D10D /* SettingsScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3E553591206C23950040D10D /* SettingsScene.sks */; };
+		3E553594206C27F10040D10D /* PlayOnline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E553593206C27F10040D10D /* PlayOnline.swift */; };
+		3E553596206C285A0040D10D /* PlayOnline.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3E553595206C285A0040D10D /* PlayOnline.sks */; };
+		3E553598206C28810040D10D /* LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E553597206C28810040D10D /* LoadingScreen.swift */; };
+		3E55359A206C28CC0040D10D /* LoadingScreen.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3E553599206C28CC0040D10D /* LoadingScreen.sks */; };
+		3E86254520648C6900FA699C /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E86254420648C6900FA699C /* MenuScene.swift */; };
+		3E86254720648CA600FA699C /* MenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3E86254620648CA600FA699C /* MenuScene.sks */; };
+		3EAE49132069B2C7005DA717 /* DeathScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAE49122069B2C7005DA717 /* DeathScene.swift */; };
+		3EAE49152069B2E5005DA717 /* DeathScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3EAE49142069B2E5005DA717 /* DeathScene.sks */; };
+		3EAE49192069EC7F005DA717 /* ADScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAE49182069EC7F005DA717 /* ADScene.swift */; };
+		3EAE491B2069ECB3005DA717 /* ADScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3EAE491A2069ECB3005DA717 /* ADScene.sks */; };
+		3EBBC95C20551A09008BF275 /* paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBBC95B20551A09008BF275 /* paths.swift */; };
+		3EBBC95E20551ADC008BF275 /* random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBBC95D20551ADC008BF275 /* random.swift */; };
+		3EBCB8FA206C6969006AE591 /* bg.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3EBCB8F9206C6969006AE591 /* bg.mp3 */; };
+		3EBCB8FC206C6977006AE591 /* BGGS.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3EBCB8FB206C6977006AE591 /* BGGS.mp3 */; };
+		3EBCB8FE206C697F006AE591 /* deathScene.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3EBCB8FD206C697E006AE591 /* deathScene.mp3 */; };
+		3EBCB900206C6989006AE591 /* loading.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3EBCB8FF206C6988006AE591 /* loading.mp3 */; };
+		3EBCB902206C704E006AE591 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3EBCB901206C704E006AE591 /* GoogleService-Info.plist */; };
+		3EC0F8B120424C8B0069DFAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC0F8B020424C8B0069DFAF /* AppDelegate.swift */; };
+		3EC0F8B320424C8B0069DFAF /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3EC0F8B220424C8B0069DFAF /* GameScene.sks */; };
+		3EC0F8B520424C8B0069DFAF /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3EC0F8B420424C8B0069DFAF /* Actions.sks */; };
+		3EC0F8B720424C8B0069DFAF /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC0F8B620424C8B0069DFAF /* GameScene.swift */; };
+		3EC0F8B920424C8B0069DFAF /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC0F8B820424C8B0069DFAF /* GameViewController.swift */; };
+		3EC0F8BC20424C8B0069DFAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EC0F8BA20424C8B0069DFAF /* Main.storyboard */; };
+		3EC0F8BE20424C8B0069DFAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EC0F8BD20424C8B0069DFAF /* Assets.xcassets */; };
+		3EC0F8C120424C8B0069DFAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EC0F8BF20424C8B0069DFAF /* LaunchScreen.storyboard */; };
+		3EC0F8CC20424C8B0069DFAF /* Space_ArenaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC0F8CB20424C8B0069DFAF /* Space_ArenaTests.swift */; };
+		3EC0F8D720424C8B0069DFAF /* Space_ArenaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC0F8D620424C8B0069DFAF /* Space_ArenaUITests.swift */; };
+		3EE00F03206ED60700018520 /* Tutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE00F02206ED60700018520 /* Tutorial.swift */; };
+		3EE00F05206ED61E00018520 /* Tutorial.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3EE00F04206ED61E00018520 /* Tutorial.sks */; };
+		3EE2BC2A206D45970024D86C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EE2BC29206D45970024D86C /* StoreKit.framework */; };
+		BB6572DA6765F888690D29AF /* Pods_Space_ArenaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3B4C520CD1197DE1D7F6D30 /* Pods_Space_ArenaTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3EC0F8C820424C8B0069DFAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3EC0F8A520424C8B0069DFAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3EC0F8AC20424C8B0069DFAF;
+			remoteInfo = "Space Arena";
+		};
+		3EC0F8D320424C8B0069DFAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3EC0F8A520424C8B0069DFAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3EC0F8AC20424C8B0069DFAF;
+			remoteInfo = "Space Arena";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07CAED3B116BF44384586394 /* Pods-Space Arena.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Space Arena.release.xcconfig"; path = "Pods/Target Support Files/Pods-Space Arena/Pods-Space Arena.release.xcconfig"; sourceTree = "<group>"; };
+		1F92CAE25B85CF9AEA87B3B1 /* Pods_Space_Arena.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Space_Arena.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2532C38ADA1B967684004778 /* Pods_Space_ArenaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Space_ArenaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E55358F206C23760040D10D /* SettingsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScene.swift; sourceTree = "<group>"; };
+		3E553591206C23950040D10D /* SettingsScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SettingsScene.sks; sourceTree = "<group>"; };
+		3E553593206C27F10040D10D /* PlayOnline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayOnline.swift; sourceTree = "<group>"; };
+		3E553595206C285A0040D10D /* PlayOnline.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PlayOnline.sks; sourceTree = "<group>"; };
+		3E553597206C28810040D10D /* LoadingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreen.swift; sourceTree = "<group>"; };
+		3E553599206C28CC0040D10D /* LoadingScreen.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = LoadingScreen.sks; sourceTree = "<group>"; };
+		3E73C487206D43E900BC497B /* Space Arena.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Space Arena.entitlements"; sourceTree = "<group>"; };
+		3E86254420648C6900FA699C /* MenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
+		3E86254620648CA600FA699C /* MenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MenuScene.sks; sourceTree = "<group>"; };
+		3EAE49122069B2C7005DA717 /* DeathScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathScene.swift; sourceTree = "<group>"; };
+		3EAE49142069B2E5005DA717 /* DeathScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = DeathScene.sks; sourceTree = "<group>"; };
+		3EAE49182069EC7F005DA717 /* ADScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADScene.swift; sourceTree = "<group>"; };
+		3EAE491A2069ECB3005DA717 /* ADScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ADScene.sks; sourceTree = "<group>"; };
+		3EBBC95B20551A09008BF275 /* paths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = paths.swift; sourceTree = "<group>"; };
+		3EBBC95D20551ADC008BF275 /* random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = random.swift; sourceTree = "<group>"; };
+		3EBCB8F9206C6969006AE591 /* bg.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = bg.mp3; path = music/bg.mp3; sourceTree = "<group>"; };
+		3EBCB8FB206C6977006AE591 /* BGGS.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = BGGS.mp3; path = music/BGGS.mp3; sourceTree = "<group>"; };
+		3EBCB8FD206C697E006AE591 /* deathScene.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = deathScene.mp3; path = music/deathScene.mp3; sourceTree = "<group>"; };
+		3EBCB8FF206C6988006AE591 /* loading.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = loading.mp3; path = music/loading.mp3; sourceTree = "<group>"; };
+		3EBCB901206C704E006AE591 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		3EC0F8AD20424C8B0069DFAF /* Space Arena.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Space Arena.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EC0F8B020424C8B0069DFAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3EC0F8B220424C8B0069DFAF /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		3EC0F8B420424C8B0069DFAF /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		3EC0F8B620424C8B0069DFAF /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		3EC0F8B820424C8B0069DFAF /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		3EC0F8BB20424C8B0069DFAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3EC0F8BD20424C8B0069DFAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3EC0F8C020424C8B0069DFAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3EC0F8C220424C8B0069DFAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3EC0F8C720424C8B0069DFAF /* Space ArenaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Space ArenaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EC0F8CB20424C8B0069DFAF /* Space_ArenaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Space_ArenaTests.swift; sourceTree = "<group>"; };
+		3EC0F8CD20424C8B0069DFAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3EC0F8D220424C8B0069DFAF /* Space ArenaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Space ArenaUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EC0F8D620424C8B0069DFAF /* Space_ArenaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Space_ArenaUITests.swift; sourceTree = "<group>"; };
+		3EC0F8D820424C8B0069DFAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3EE00F02206ED60700018520 /* Tutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tutorial.swift; sourceTree = "<group>"; };
+		3EE00F04206ED61E00018520 /* Tutorial.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Tutorial.sks; sourceTree = "<group>"; };
+		3EE2BC29206D45970024D86C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		43CDA6365031F2451449DACD /* Pods-Space ArenaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Space ArenaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Space ArenaUITests/Pods-Space ArenaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		63FFA54758C19026B930B435 /* Pods-Space Arena.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Space Arena.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Space Arena/Pods-Space Arena.debug.xcconfig"; sourceTree = "<group>"; };
+		65A75C1F2F5F648CDB1B2FF9 /* Pods-Space ArenaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Space ArenaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Space ArenaTests/Pods-Space ArenaTests.release.xcconfig"; sourceTree = "<group>"; };
+		BFE339FACE4BB9723372AB11 /* Pods-Space ArenaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Space ArenaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Space ArenaTests/Pods-Space ArenaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E3B4C520CD1197DE1D7F6D30 /* Pods_Space_ArenaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Space_ArenaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAD39DE4ABA95E7C7F1E1566 /* Pods-Space ArenaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Space ArenaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Space ArenaUITests/Pods-Space ArenaUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3EC0F8AA20424C8B0069DFAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E0268C19304A2D1CD39ADBB /* Pods_Space_Arena.framework in Frameworks */,
+				3EE2BC2A206D45970024D86C /* StoreKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EC0F8C420424C8B0069DFAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB6572DA6765F888690D29AF /* Pods_Space_ArenaTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EC0F8CF20424C8B0069DFAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19F42BC401EB73E465BB4775 /* Pods_Space_ArenaUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3EAE491C2069ECC5005DA717 /* SKS */ = {
+			isa = PBXGroup;
+			children = (
+				3E86254620648CA600FA699C /* MenuScene.sks */,
+				3EC0F8B420424C8B0069DFAF /* Actions.sks */,
+				3E553591206C23950040D10D /* SettingsScene.sks */,
+				3EAE49142069B2E5005DA717 /* DeathScene.sks */,
+				3EC0F8B220424C8B0069DFAF /* GameScene.sks */,
+				3EE00F04206ED61E00018520 /* Tutorial.sks */,
+				3E553595206C285A0040D10D /* PlayOnline.sks */,
+				3EAE491A2069ECB3005DA717 /* ADScene.sks */,
+				3E553599206C28CC0040D10D /* LoadingScreen.sks */,
+			);
+			path = SKS;
+			sourceTree = "<group>";
+		};
+		3EAE491D206B0F33005DA717 /* scenes */ = {
+			isa = PBXGroup;
+			children = (
+				3E86254420648C6900FA699C /* MenuScene.swift */,
+				3E553593206C27F10040D10D /* PlayOnline.swift */,
+				3E553597206C28810040D10D /* LoadingScreen.swift */,
+				3EAE49182069EC7F005DA717 /* ADScene.swift */,
+				3EC0F8B620424C8B0069DFAF /* GameScene.swift */,
+				3E55358F206C23760040D10D /* SettingsScene.swift */,
+				3EAE49122069B2C7005DA717 /* DeathScene.swift */,
+				3EE00F02206ED60700018520 /* Tutorial.swift */,
+			);
+			path = scenes;
+			sourceTree = "<group>";
+		};
+		3EC0F8A420424C8B0069DFAF = {
+			isa = PBXGroup;
+			children = (
+				3EC0F8AF20424C8B0069DFAF /* Space Arena */,
+				3EC0F8CA20424C8B0069DFAF /* Space ArenaTests */,
+				3EC0F8D520424C8B0069DFAF /* Space ArenaUITests */,
+				3EC0F8AE20424C8B0069DFAF /* Products */,
+				3EBCB8FF206C6988006AE591 /* loading.mp3 */,
+				3EBCB8FD206C697E006AE591 /* deathScene.mp3 */,
+				3EBCB8FB206C6977006AE591 /* BGGS.mp3 */,
+				3EBCB8F9206C6969006AE591 /* bg.mp3 */,
+				419554316F84A2AC7127B380 /* Pods */,
+				E579452D5759F8060C795040 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3EC0F8AE20424C8B0069DFAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3EC0F8AD20424C8B0069DFAF /* Space Arena.app */,
+				3EC0F8C720424C8B0069DFAF /* Space ArenaTests.xctest */,
+				3EC0F8D220424C8B0069DFAF /* Space ArenaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3EC0F8AF20424C8B0069DFAF /* Space Arena */ = {
+			isa = PBXGroup;
+			children = (
+				3E73C487206D43E900BC497B /* Space Arena.entitlements */,
+				3EC0F8C220424C8B0069DFAF /* Info.plist */,
+				3EC0F8BA20424C8B0069DFAF /* Main.storyboard */,
+				3EC0F8BD20424C8B0069DFAF /* Assets.xcassets */,
+				3EC0F8BF20424C8B0069DFAF /* LaunchScreen.storyboard */,
+				3EC0F8B020424C8B0069DFAF /* AppDelegate.swift */,
+				3EBCB901206C704E006AE591 /* GoogleService-Info.plist */,
+				3EBBC95B20551A09008BF275 /* paths.swift */,
+				3EBBC95D20551ADC008BF275 /* random.swift */,
+				3EC0F8B820424C8B0069DFAF /* GameViewController.swift */,
+				3EAE491C2069ECC5005DA717 /* SKS */,
+				3EAE491D206B0F33005DA717 /* scenes */,
+			);
+			path = "Space Arena";
+			sourceTree = "<group>";
+		};
+		3EC0F8CA20424C8B0069DFAF /* Space ArenaTests */ = {
+			isa = PBXGroup;
+			children = (
+				3EC0F8CB20424C8B0069DFAF /* Space_ArenaTests.swift */,
+				3EC0F8CD20424C8B0069DFAF /* Info.plist */,
+			);
+			path = "Space ArenaTests";
+			sourceTree = "<group>";
+		};
+		3EC0F8D520424C8B0069DFAF /* Space ArenaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3EC0F8D620424C8B0069DFAF /* Space_ArenaUITests.swift */,
+				3EC0F8D820424C8B0069DFAF /* Info.plist */,
+			);
+			path = "Space ArenaUITests";
+			sourceTree = "<group>";
+		};
+		419554316F84A2AC7127B380 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				63FFA54758C19026B930B435 /* Pods-Space Arena.debug.xcconfig */,
+				07CAED3B116BF44384586394 /* Pods-Space Arena.release.xcconfig */,
+				BFE339FACE4BB9723372AB11 /* Pods-Space ArenaTests.debug.xcconfig */,
+				65A75C1F2F5F648CDB1B2FF9 /* Pods-Space ArenaTests.release.xcconfig */,
+				43CDA6365031F2451449DACD /* Pods-Space ArenaUITests.debug.xcconfig */,
+				FAD39DE4ABA95E7C7F1E1566 /* Pods-Space ArenaUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E579452D5759F8060C795040 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3EE2BC29206D45970024D86C /* StoreKit.framework */,
+				1F92CAE25B85CF9AEA87B3B1 /* Pods_Space_Arena.framework */,
+				E3B4C520CD1197DE1D7F6D30 /* Pods_Space_ArenaTests.framework */,
+				2532C38ADA1B967684004778 /* Pods_Space_ArenaUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3EC0F8AC20424C8B0069DFAF /* Space Arena */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EC0F8DB20424C8B0069DFAF /* Build configuration list for PBXNativeTarget "Space Arena" */;
+			buildPhases = (
+				4583BCA08D660417E3067404 /* [CP] Check Pods Manifest.lock */,
+				3EC0F8A920424C8B0069DFAF /* Sources */,
+				3EC0F8AA20424C8B0069DFAF /* Frameworks */,
+				3EC0F8AB20424C8B0069DFAF /* Resources */,
+				433A58BB9222423F46CEE22F /* [CP] Embed Pods Frameworks */,
+				E4160B798DBEFC5F4558DE92 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Space Arena";
+			productName = "Space Arena";
+			productReference = 3EC0F8AD20424C8B0069DFAF /* Space Arena.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3EC0F8C620424C8B0069DFAF /* Space ArenaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EC0F8DE20424C8B0069DFAF /* Build configuration list for PBXNativeTarget "Space ArenaTests" */;
+			buildPhases = (
+				0DFCE1524EDD7BF2846315F6 /* [CP] Check Pods Manifest.lock */,
+				3EC0F8C320424C8B0069DFAF /* Sources */,
+				3EC0F8C420424C8B0069DFAF /* Frameworks */,
+				3EC0F8C520424C8B0069DFAF /* Resources */,
+				BC4CBEB94802AF641DF8F723 /* [CP] Embed Pods Frameworks */,
+				22C640BBD649CF9C978398B1 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3EC0F8C920424C8B0069DFAF /* PBXTargetDependency */,
+			);
+			name = "Space ArenaTests";
+			productName = "Space ArenaTests";
+			productReference = 3EC0F8C720424C8B0069DFAF /* Space ArenaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3EC0F8D120424C8B0069DFAF /* Space ArenaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EC0F8E120424C8B0069DFAF /* Build configuration list for PBXNativeTarget "Space ArenaUITests" */;
+			buildPhases = (
+				2F36E6D73EBC50F8CC1DCB0E /* [CP] Check Pods Manifest.lock */,
+				3EC0F8CE20424C8B0069DFAF /* Sources */,
+				3EC0F8CF20424C8B0069DFAF /* Frameworks */,
+				3EC0F8D020424C8B0069DFAF /* Resources */,
+				669BA88A0D9CAE01E4DAF25A /* [CP] Embed Pods Frameworks */,
+				94EF6F3F232B7815233CBC08 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3EC0F8D420424C8B0069DFAF /* PBXTargetDependency */,
+			);
+			name = "Space ArenaUITests";
+			productName = "Space ArenaUITests";
+			productReference = 3EC0F8D220424C8B0069DFAF /* Space ArenaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3EC0F8A520424C8B0069DFAF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = EvryGame;
+				TargetAttributes = {
+					3EC0F8AC20424C8B0069DFAF = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 2DUHBW3S5J;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+							com.apple.HealthKit = {
+								enabled = 0;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.WAC = {
+								enabled = 0;
+							};
+						};
+					};
+					3EC0F8C620424C8B0069DFAF = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 2DUHBW3S5J;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3EC0F8AC20424C8B0069DFAF;
+					};
+					3EC0F8D120424C8B0069DFAF = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 2DUHBW3S5J;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3EC0F8AC20424C8B0069DFAF;
+					};
+				};
+			};
+			buildConfigurationList = 3EC0F8A820424C8B0069DFAF /* Build configuration list for PBXProject "Space Arena" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3EC0F8A420424C8B0069DFAF;
+			productRefGroup = 3EC0F8AE20424C8B0069DFAF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3EC0F8AC20424C8B0069DFAF /* Space Arena */,
+				3EC0F8C620424C8B0069DFAF /* Space ArenaTests */,
+				3EC0F8D120424C8B0069DFAF /* Space ArenaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3EC0F8AB20424C8B0069DFAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EAE491B2069ECB3005DA717 /* ADScene.sks in Resources */,
+				3E553592206C23950040D10D /* SettingsScene.sks in Resources */,
+				3EC0F8BC20424C8B0069DFAF /* Main.storyboard in Resources */,
+				3EAE49152069B2E5005DA717 /* DeathScene.sks in Resources */,
+				3EC0F8B320424C8B0069DFAF /* GameScene.sks in Resources */,
+				3EC0F8BE20424C8B0069DFAF /* Assets.xcassets in Resources */,
+				3E553596206C285A0040D10D /* PlayOnline.sks in Resources */,
+				3EBCB8FC206C6977006AE591 /* BGGS.mp3 in Resources */,
+				3EC0F8C120424C8B0069DFAF /* LaunchScreen.storyboard in Resources */,
+				3EE00F05206ED61E00018520 /* Tutorial.sks in Resources */,
+				3EBCB902206C704E006AE591 /* GoogleService-Info.plist in Resources */,
+				3EBCB8FE206C697F006AE591 /* deathScene.mp3 in Resources */,
+				3EC0F8B520424C8B0069DFAF /* Actions.sks in Resources */,
+				3EBCB900206C6989006AE591 /* loading.mp3 in Resources */,
+				3E86254720648CA600FA699C /* MenuScene.sks in Resources */,
+				3EBCB8FA206C6969006AE591 /* bg.mp3 in Resources */,
+				3E55359A206C28CC0040D10D /* LoadingScreen.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EC0F8C520424C8B0069DFAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EC0F8D020424C8B0069DFAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0DFCE1524EDD7BF2846315F6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Space ArenaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		22C640BBD649CF9C978398B1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Space ArenaTests/Pods-Space ArenaTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2F36E6D73EBC50F8CC1DCB0E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Space ArenaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		433A58BB9222423F46CEE22F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Space Arena/Pods-Space Arena-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Space Arena/Pods-Space Arena-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4583BCA08D660417E3067404 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Space Arena-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		669BA88A0D9CAE01E4DAF25A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Space ArenaUITests/Pods-Space ArenaUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94EF6F3F232B7815233CBC08 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Space ArenaUITests/Pods-Space ArenaUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC4CBEB94802AF641DF8F723 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Space ArenaTests/Pods-Space ArenaTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4160B798DBEFC5F4558DE92 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Space Arena/Pods-Space Arena-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3EC0F8A920424C8B0069DFAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EC0F8B720424C8B0069DFAF /* GameScene.swift in Sources */,
+				3EE00F03206ED60700018520 /* Tutorial.swift in Sources */,
+				3E553598206C28810040D10D /* LoadingScreen.swift in Sources */,
+				3EC0F8B920424C8B0069DFAF /* GameViewController.swift in Sources */,
+				3EBBC95C20551A09008BF275 /* paths.swift in Sources */,
+				3EAE49192069EC7F005DA717 /* ADScene.swift in Sources */,
+				3E86254520648C6900FA699C /* MenuScene.swift in Sources */,
+				3E553594206C27F10040D10D /* PlayOnline.swift in Sources */,
+				3EBBC95E20551ADC008BF275 /* random.swift in Sources */,
+				3E553590206C23760040D10D /* SettingsScene.swift in Sources */,
+				3EC0F8B120424C8B0069DFAF /* AppDelegate.swift in Sources */,
+				3EAE49132069B2C7005DA717 /* DeathScene.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EC0F8C320424C8B0069DFAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EC0F8CC20424C8B0069DFAF /* Space_ArenaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EC0F8CE20424C8B0069DFAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EC0F8D720424C8B0069DFAF /* Space_ArenaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3EC0F8C920424C8B0069DFAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3EC0F8AC20424C8B0069DFAF /* Space Arena */;
+			targetProxy = 3EC0F8C820424C8B0069DFAF /* PBXContainerItemProxy */;
+		};
+		3EC0F8D420424C8B0069DFAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3EC0F8AC20424C8B0069DFAF /* Space Arena */;
+			targetProxy = 3EC0F8D320424C8B0069DFAF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3EC0F8BA20424C8B0069DFAF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3EC0F8BB20424C8B0069DFAF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3EC0F8BF20424C8B0069DFAF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3EC0F8C020424C8B0069DFAF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3EC0F8D920424C8B0069DFAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3EC0F8DA20424C8B0069DFAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3EC0F8DC20424C8B0069DFAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63FFA54758C19026B930B435 /* Pods-Space Arena.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Space Arena/Space Arena.entitlements";
+				DEVELOPMENT_TEAM = 2DUHBW3S5J;
+				INFOPLIST_FILE = "Space Arena/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Ever.Space-Arena";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		3EC0F8DD20424C8B0069DFAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07CAED3B116BF44384586394 /* Pods-Space Arena.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Space Arena/Space Arena.entitlements";
+				DEVELOPMENT_TEAM = 2DUHBW3S5J;
+				INFOPLIST_FILE = "Space Arena/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Ever.Space-Arena";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		3EC0F8DF20424C8B0069DFAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFE339FACE4BB9723372AB11 /* Pods-Space ArenaTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 2DUHBW3S5J;
+				INFOPLIST_FILE = "Space ArenaTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Ever.Space-ArenaTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Space Arena.app/Space Arena";
+			};
+			name = Debug;
+		};
+		3EC0F8E020424C8B0069DFAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65A75C1F2F5F648CDB1B2FF9 /* Pods-Space ArenaTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 2DUHBW3S5J;
+				INFOPLIST_FILE = "Space ArenaTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Ever.Space-ArenaTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Space Arena.app/Space Arena";
+			};
+			name = Release;
+		};
+		3EC0F8E220424C8B0069DFAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43CDA6365031F2451449DACD /* Pods-Space ArenaUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 2DUHBW3S5J;
+				INFOPLIST_FILE = "Space ArenaUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Ever.Space-ArenaUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = "Space Arena";
+			};
+			name = Debug;
+		};
+		3EC0F8E320424C8B0069DFAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAD39DE4ABA95E7C7F1E1566 /* Pods-Space ArenaUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 2DUHBW3S5J;
+				INFOPLIST_FILE = "Space ArenaUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Ever.Space-ArenaUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = "Space Arena";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3EC0F8A820424C8B0069DFAF /* Build configuration list for PBXProject "Space Arena" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EC0F8D920424C8B0069DFAF /* Debug */,
+				3EC0F8DA20424C8B0069DFAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3EC0F8DB20424C8B0069DFAF /* Build configuration list for PBXNativeTarget "Space Arena" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EC0F8DC20424C8B0069DFAF /* Debug */,
+				3EC0F8DD20424C8B0069DFAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3EC0F8DE20424C8B0069DFAF /* Build configuration list for PBXNativeTarget "Space ArenaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EC0F8DF20424C8B0069DFAF /* Debug */,
+				3EC0F8E020424C8B0069DFAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3EC0F8E120424C8B0069DFAF /* Build configuration list for PBXNativeTarget "Space ArenaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EC0F8E220424C8B0069DFAF /* Debug */,
+				3EC0F8E320424C8B0069DFAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3EC0F8A520424C8B0069DFAF /* Project object */;
+}
