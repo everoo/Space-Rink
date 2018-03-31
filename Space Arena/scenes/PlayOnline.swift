@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  PlayOnline.swift
 //  Space Arena
 //
 //  Created by Ever on 3/28/18.
@@ -13,10 +13,10 @@ import Firebase
 
 class PlayOnline: SKScene {
 	private var lastUpdateTime : TimeInterval = 0
-	
+
 	var entities = [GKEntity]()
 	var graphs = [String : GKGraph]()
-	
+
 	override func didMove(to view: SKView) {
 		self.backgroundColor = UIColor.gray
 		let backgroundSound = SKAudioNode(fileNamed: "loading.mp3")

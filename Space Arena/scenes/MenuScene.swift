@@ -1,5 +1,5 @@
 //
-//  scene2.swift
+//  MenuScene.swift
 //  Space Arena
 //
 //  Created by Ever on 3/22/18.
@@ -14,28 +14,28 @@ var staminaCount = Int(20)
 
 class MenuScene: SKScene {
 	private var lastUpdateTime : TimeInterval = 0
-	
+
 	var entities = [GKEntity]()
 	var graphs = [String : GKGraph]()
 
 	let playButton = SKShapeNode(rect: CGRect(x: -250, y: -50, width: 500, height: 100), cornerRadius: 20)
 	let play = SKLabelNode(text: "PLAY")
-	
+
 	let settingsButton = SKShapeNode(rect: CGRect(x: -45, y: -50, width: 90, height: 100), cornerRadius: 20)
 	let settings = SKLabelNode(text: "⚙")
-	
+
 	let adButton = SKShapeNode(rect: CGRect(x: -45, y: -50, width: 90, height: 100), cornerRadius: 20)
 	let ad = SKLabelNode(text: "AD")
-	
+
 	let playBotButton = SKShapeNode(rect: CGRect(x: -140, y: -50, width: 280, height: 100), cornerRadius: 20)
 	let playBot = SKLabelNode(text: "PLAY BOT")
-	
+
 	let staminaBar = SKShapeNode(rect: CGRect(x: -440, y: -34, width: 884, height: 68), cornerRadius: 8)
 	var staminaAmount = Int(0)
 	let stamina = SKShapeNode(rect: CGRect(x: -20, y: -30, width: 40, height: 60), cornerRadius: 8)
 
-	
-	
+
+
 	override func didMove(to view: SKView) {
 		self.backgroundColor = UIColor.black
 		let backgroundSound = SKAudioNode(fileNamed: "bg.mp3")
@@ -57,7 +57,7 @@ class MenuScene: SKScene {
 		addChild(playButton)
 		addChild(play)
 		addChild(playShadow)
-		
+
 		playBotButton.position = CGPoint(x: 0, y: -120)
 		playBotButton.fillColor = UIColor.gray
 		playBotButton.zPosition = 1
@@ -74,7 +74,7 @@ class MenuScene: SKScene {
 		addChild(playBotButton)
 		addChild(playBot)
 		addChild(playBotShadow)
-		
+
 		settingsButton.position = CGPoint(x: -205, y: -120)
 		settingsButton.fillColor = UIColor.gray
 		settingsButton.zPosition = 1
@@ -85,7 +85,7 @@ class MenuScene: SKScene {
 		settings.fontSize = 56
 		addChild(settingsButton)
 		addChild(settings)
-		
+
 		adButton.position = CGPoint(x: 205, y: -120)
 		adButton.fillColor = UIColor.gray
 		adButton.zPosition = 1
@@ -110,9 +110,9 @@ class MenuScene: SKScene {
 		staminaBar.position = CGPoint(x: 0, y: 200)
 		staminaBar.zPosition = 0.9
 		staminaBar.fillColor = UIColor.black
-		
+
 		addChild(staminaBar)
-		
+
 		func addStar() {
 			let star = SKEmitterNode()
 			star.position = CGPoint(x: 0, y: 0)
@@ -126,7 +126,7 @@ class MenuScene: SKScene {
 			star.physicsBody?.linearDamping = 0
 			addChild(star)
 		}
-		
+
 		func addStamina() {
 			let staminaCopy = stamina.copy() as! SKShapeNode
 			staminaCopy.position = CGPoint(x: (44*staminaAmount)-416, y: Int(staminaBar.position.y))
@@ -139,7 +139,7 @@ class MenuScene: SKScene {
 		run(SKAction.run(addStar))
 
 	}
-	
+
 	func touchDownInPlayBotButton(atPoint pos : CGPoint) {
 		if (staminaCount>=1){
 		staminaCount -= 1
@@ -160,8 +160,8 @@ class MenuScene: SKScene {
 			labelCopy.run(SKAction.sequence([action1, action2, action3]))
 		}
 	}
-	
-	
+
+
 	func touchDownInPlayButton(atPoint pos : CGPoint) {
 		if (staminaCount>=2){
 			staminaCount -= 2
@@ -191,9 +191,9 @@ class MenuScene: SKScene {
 		settings?.scaleMode = .aspectFill
 		self.view?.presentScene(settings!, transition: SKTransition.push(with: SKTransitionDirection.right, duration: 0.5))
 	}
-	
+
 	var activeTouches:[SKShapeNode:UITouch] = [:]
-	
+
 	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 		for touch in touches {
 			let location = touch.location(in: self)
@@ -215,9 +215,9 @@ class MenuScene: SKScene {
 			}
 		}
 	}
-	
+
 	override func update(_ currentTime: TimeInterval) {
-		
+
 		if (self.lastUpdateTime == 0) {
 			self.lastUpdateTime = currentTime
 		}
