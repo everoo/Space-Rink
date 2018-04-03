@@ -32,33 +32,33 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 	var entities = [GKEntity]()
 	var graphs = [String : GKGraph]()
 	private var lastUpdateTime : TimeInterval = 0
-	
+
 	let ball = SKShapeNode(ellipseOf: CGSize(width: 100, height: 100))
 	let base = SKShapeNode(rectOf: CGSize(width: 100, height: 100))
 	let healthBar = SKShapeNode(rect: CGRect(x: 0, y: 0, width: 750, height: 11))
 	let arrow = SKShapeNode(path: pathOfArrow(CGRect(x: 0, y: 0, width: 1, height: 1), scaler: 2))
-	
+
 	let player = SKShapeNode()
 	let enemy = SKShapeNode()
 	var asteroid : SKShapeNode?
 	var bullet : SKShapeNode?
 	var forceField : SKShapeNode?
 	var missile : SKShapeNode?
-	
+
 	var medPack : SKShapeNode?
 	var forceFieldUpgrade : SKShapeNode?
 	var missileUpgrade : SKShapeNode?
 
 	var cam: SKCameraNode?
-	
+
 	let leftSide = SKShapeNode(rect: CGRect(x: 0, y: 0, width: 375, height: 1000))
 	let rightSide = SKShapeNode(rect: CGRect(x: 0, y: 0, width: 375, height: 1000))
-	
+
 	var health = CGFloat(1)
 	var baseTouchBeganPos = CGPoint()
 	var ballTouchMovedPos = CGPoint()
 	var touchMovedPos = CGPoint()
-	
+
 	override func sceneDidLoad() {
 		let backgroundSound = SKAudioNode(fileNamed: "BGGS.mp3")
 		backgroundSound.isPositional = false
@@ -72,7 +72,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 		enemyDamageDealt = 0
 		playerDamageDealt = 0
 
-		
+
 		self.size = CGSize(width: 1500, height: 1500)
 		cam = SKCameraNode()
 		self.camera = cam
@@ -88,7 +88,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 		self.physicsBody?.collisionBitMask = PhysicsCategory.player | PhysicsCategory.enemy
 		self.physicsBody?.contactTestBitMask = PhysicsCategory.none
 
-		
+
 		self.bullet = SKShapeNode.init(ellipseOf: CGSize(width: 10, height: 10))
 		if let bullet = self.bullet{
 			bullet.lineWidth = 2
@@ -98,7 +98,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 			bullet.physicsBody?.linearDamping = 0
 			bullet.physicsBody?.allowsRotation = false
 		}
-		
+
 		self.medPack = SKShapeNode()
 		if let medPack = self.medPack {
 			medPack.fillColor = UIColor.black
@@ -106,7 +106,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 			medPack.lineWidth = 5
 			medPack.zPosition = 0
 		}
-		
+
 		self.forceFieldUpgrade = SKShapeNode()
 		if let forceFieldUpgrade = self.forceFieldUpgrade {
 			forceFieldUpgrade.fillColor = UIColor.black
@@ -114,7 +114,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 			forceFieldUpgrade.lineWidth = 5
 			forceFieldUpgrade.zPosition = 0
 		}
-		
+
 		self.forceField = SKShapeNode()
 		if let forceField = self.forceField {
 			forceField.fillColor = UIColor.clear
@@ -130,7 +130,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 			missileUpgrade.lineWidth = 5
 			missileUpgrade.zPosition = 0
 		}
-		
+
 		self.missile = SKShapeNode()
 		if let missile = self.missile {
 			missile.fillColor = UIColor.red
@@ -138,7 +138,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 			missile.lineWidth = 2
 			missile.zPosition = 5
 		}
-		
+
 		self.asteroid = SKShapeNode()
 		if let asteroid = self.asteroid {
 			asteroid.fillColor = UIColor.black
@@ -166,7 +166,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 				asteroidCopy.run(SKAction.sequence([actionMove, actionMoveDone]))
 			}
 		}
-		
+
 		func addMedPack() {
 			if let medPackCopy = self.medPack?.copy() as! SKShapeNode? {
 				let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
@@ -184,7 +184,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 				medPackCopy.physicsBody?.collisionBitMask = PhysicsCategory.none
 			}
 		}
-		
+
 		func addForceFieldUpgrade() {
 			if let forceFieldUpgradeCopy = self.forceFieldUpgrade?.copy() as! SKShapeNode? {
 				let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
@@ -202,7 +202,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 				forceFieldUpgradeCopy.physicsBody?.collisionBitMask = PhysicsCategory.none
 			}
 		}
-		
+
 		func addMissileUpgrade() {
 			if let missileUpgradeCopy = self.missileUpgrade?.copy() as! SKShapeNode? {
 				let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
@@ -239,7 +239,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 			player.physicsBody?.contactTestBitMask = PhysicsCategory.medPack | PhysicsCategory.playerBullet | PhysicsCategory.enemyBullet
 			addChild(player)
 		}
-		
+
 		func addEnemy() {
 			let enemySize = CGRect(x: 0, y: 0, width: 1, height: 1)
 			enemy.path = pathOfShip(enemySize, scaler: 2)
@@ -258,7 +258,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 			enemy.physicsBody?.contactTestBitMask = PhysicsCategory.playerBullet
 			addChild(enemy)
 		}
-		
+
 		func addControls() {
 			base.fillColor = UIColor.clear
 			base.strokeColor = UIColor.white
@@ -280,7 +280,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 			addChild(leftSide)
 			addChild(rightSide)
 		}
-		
+
 		func addArrow() {
 			arrow.strokeColor = UIColor.darkGray
 			arrow.fillColor = UIColor.clear
@@ -289,7 +289,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 			arrow.zPosition = 0.5
 			addChild(arrow)
 		}
-		
+
 		func pointAtPlayer() {
 			let distX = (enemy.position.x) - (player.position.x)
 			let distY = (enemy.position.y) - (player.position.y)
@@ -299,11 +299,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 				enemy.zRotation = atan(distY/distX) - 1.57079633
 			}
 		}
-		
+
 		func moveToPlayer() {
 			enemy.physicsBody?.velocity = CGVector(dx: 100*cos(enemy.zRotation+1.57079633), dy: 100*sin(enemy.zRotation+1.57079633))
 		}
-		
+
 		func shootAtPlayer() {
 			if let enemyBulletCopy = self.bullet?.copy() as! SKShapeNode? {
 				self.addChild(enemyBulletCopy)
@@ -320,7 +320,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 				enemyShotsFired += 1
 			}
 		}
-		
+
 		enemy.run(SKAction.repeatForever(SKAction.sequence([SKAction.run(pointAtPlayer), SKAction.run(moveToPlayer), SKAction.wait(forDuration: 0.01)])))
 		enemy.run(SKAction.repeatForever(SKAction.sequence([SKAction.run(shootAtPlayer), SKAction.wait(forDuration: 0.3)])))
 		run(SKAction.sequence([SKAction.run(addPlayer), SKAction.run(addControls), SKAction.run(addEnemy), SKAction.run(addArrow)]))
@@ -329,7 +329,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 		run(SKAction.repeatForever(SKAction.sequence([SKAction.run(addForceFieldUpgrade), SKAction.wait(forDuration: 3)])))
 		run(SKAction.repeatForever(SKAction.sequence([SKAction.run(addMissileUpgrade), SKAction.wait(forDuration: 3)])))
 	}
-	
+
 	func addExplosion(posX: CGFloat,posY: CGFloat) {
 		let emitter = SKEmitterNode()
 		emitter.position = CGPoint(x: posX, y: posY)
@@ -350,7 +350,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 		let actionMoveDone = SKAction.removeFromParent()
 		emitter.run(SKAction.sequence([actionMove, actionMoveDone]))
 	}
-	
+
 	func killedEnemy() {
 		let actualY = random(min: -self.frame.height/2+50, max: self.frame.height/2-50)
 		let actualX = random(min: -self.frame.width/2+50, max: self.frame.width/2-50)
@@ -360,7 +360,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 		addChild(enemy)
 		playerShotsHit += 1
 	}
-	
+
 
 	func addForceField() {
 		let forceFieldCopy = self.forceField?.copy() as! SKShapeNode?
@@ -379,7 +379,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 		forceFieldCopy?.physicsBody?.contactTestBitMask = PhysicsCategory.enemyBullet | PhysicsCategory.playerBullet
 		forceFieldCopy?.physicsBody?.collisionBitMask = PhysicsCategory.none
 	}
-	
+
 	func addMissile() {
 		let missileCopy = self.missile?.copy() as! SKShapeNode?
 		let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
@@ -406,7 +406,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 		missileCopy?.physicsBody?.collisionBitMask = PhysicsCategory.asteroid
 		missileCopy?.physicsBody?.contactTestBitMask = PhysicsCategory.enemy | PhysicsCategory.player | PhysicsCategory.enemyBullet | PhysicsCategory.forceField
 	}
-	
+
 	func didBegin(_ contact: SKPhysicsContact) {
 		if (contact.bodyA.categoryBitMask == PhysicsCategory.enemy && contact.bodyB.categoryBitMask == PhysicsCategory.playerBullet) {
 			killedEnemy()
@@ -427,7 +427,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 		if (contact.bodyA.categoryBitMask == PhysicsCategory.forceField && contact.bodyB.categoryBitMask == PhysicsCategory.playerBullet) {
 			contact.bodyA.node?.removeFromParent()
 		}
-		
+
 		if (contact.bodyA.categoryBitMask == PhysicsCategory.playerBullet && contact.bodyB.categoryBitMask == PhysicsCategory.enemyBullet) {
 			contact.bodyA.node?.removeFromParent()
 			contact.bodyB.node?.removeFromParent()
@@ -466,9 +466,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 			missileVisual.run(SKAction.sequence([SKAction.scale(by: 1.3, duration: 0.2), SKAction.removeFromParent()]))
 			addMissile()
 		}
-		
+
 	}
-	
+
 	func touchDownInRightSide(atPoint pos : CGPoint) {
 		let playerBulletCopy = self.bullet?.copy() as! SKShapeNode
 		self.addChild(playerBulletCopy)
@@ -484,7 +484,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 		playerBulletCopy.physicsBody?.contactTestBitMask =  PhysicsCategory.enemy | PhysicsCategory.player | PhysicsCategory.enemyBullet | PhysicsCategory.forceField
 		playerShotsFired += 1
 	}
-	
+
 	func touchDownInLeftSide(atPoint pos : CGPoint) {
 		addChild(base)
 		addChild(ball)
@@ -493,11 +493,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 		touchMovedPos = pos
 		baseTouchBeganPos = base.position
 	}
-	
+
 	func touchMoveInLeftSide(toPoint pos : CGPoint) {
 		ballTouchMovedPos.x = pos.x - (cam?.position.x)!
 		ballTouchMovedPos.y = pos.y - (cam?.position.y)!
-		
+
 		let distX = (ball.position.x) - (base.position.x)
 		let distY = (ball.position.y) - (base.position.y)
 		if (ball.position.x>base.position.x){
@@ -510,7 +510,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 	}
 
 	var activeTouches:[SKShapeNode:UITouch] = [:]
-	
+
 	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 		for touch in touches {
 			let location = touch.location(in: self)
@@ -518,20 +518,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 				touchDownInRightSide(atPoint: location)
 				activeTouches[rightSide]=touch
 			}
-			
+
 			if leftSide.frame.contains(location) && activeTouches[leftSide] == nil {
 				touchDownInLeftSide(atPoint: location)
 				activeTouches[leftSide]=touch
 			}
 		}
 	}
-	
+
 	override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
 		if let touch = activeTouches[leftSide], touches.contains(touch) {
 			touchMoveInLeftSide(toPoint: touch.location(in: self))
 		}
 	}
-	
+
 	override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
 		for touch in touches {
 			let location = touch.location(in: self)
@@ -595,13 +595,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 				}
 			}
 		}
-		
+
 
 		base.position = CGPoint(x: ((cam?.position.x)! + baseTouchBeganPos.x),y: ((cam?.position.y)! + baseTouchBeganPos.y))
 
 		let xDistX:CGFloat = 50
 		let yDistY:CGFloat = 50
-		
+
 		if (touchMovedPos.x>base.position.x+xDistX) && (touchMovedPos.y>base.position.y+yDistY){
 			ball.position = CGPoint(x: base.position.x+xDistX, y: (base.position.y+yDistY))
 		} else {
@@ -635,8 +635,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 				}
 			}
 		}
-		
-		
+
+
 		let distX = (enemy.position.x) - (player.position.x)
 		let distY = (enemy.position.y) - (player.position.y)
 		if (enemy.position.x>player.position.x){
@@ -646,8 +646,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 		}
 		arrow.position.x = (player.position.x+(cos(arrow.zRotation+1.57079633)*30))
 		arrow.position.y = (player.position.y+(sin(arrow.zRotation+1.57079633)*30))
-		
-		
+
+
 		if (health>1) {
 			health = 1
 		}
@@ -662,25 +662,28 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 //			let actualX = random(min: -self.frame.width/2+50, max: self.frame.width/2-50)
 //			player.position = CGPoint(x: actualX, y: actualY)
 		}
-		
+
 		healthBar.xScale = health
 		leftSide.position = CGPoint(x: (cam?.position.x)!-375, y: (cam?.position.y)!-500)
 		rightSide.position = CGPoint(x: (cam?.position.x)!, y: (cam?.position.y)!-500)
 		healthBar.position = CGPoint(x: (cam?.position.x)!-375, y: ((cam?.position.y)!+(0.281*750))-10)
 
-		
+       // another bar for shield length? 
+
+
+
 		// Initialize _lastUpdateTime if it has not already been
 		if (self.lastUpdateTime == 0) {
 			self.lastUpdateTime = currentTime
 		}
 		// Calculate time since last update
 		let dt = currentTime - self.lastUpdateTime
-		
+
 		timeElapsed += dt
 		enemyDamageDealt = enemyShotsHit*5
 		playerDamageDealt = playerShotsHit*5
 
-		
+
 		// Update entities
 		for entity in self.entities {
 			entity.update(deltaTime: dt)
@@ -688,4 +691,3 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 		self.lastUpdateTime = currentTime
 	}
 }
-

@@ -24,19 +24,19 @@ class DeathScene: SKScene {
 
 	var entities = [GKEntity]()
 	var graphs = [String : GKGraph]()
-	
+
 	let menuButton = SKShapeNode(rect: CGRect(x: -125, y: -25, width: 250, height: 50), cornerRadius: 5)
 	let menu = SKLabelNode(text: "MENU")
-	
+
 	let BannerAD = GADBannerView(adSize: kGADAdSizeBanner)
-	
+
 	override func didMove(to view: SKView) {
 		var matchLength:Int = Int(timeElapsed)
 
 		let statESF = SKLabelNode(text: "Enemy Shots Fired: \(enemyShotsFired)")
 		let statPSF = SKLabelNode(text: "Player Shots Fired: \(playerShotsFired)")
 		let statESH = SKLabelNode(text: "Enemy Shots Hit: \(enemyShotsHit)")
-		let statPSH = SKLabelNode(text: "Player Shots Hit: \(playerShotsHit)")
+		let statPSH = SKLabelNode(text: "Enemy Players Killed: \(playerShotsHit)")
 		let statML = SKLabelNode(text: "Match Length: \(matchLength) seconds")
 
 		let backgroundSound = SKAudioNode(fileNamed: "deathScene.mp3")
@@ -45,22 +45,22 @@ class DeathScene: SKScene {
 		statML.fontName = "Menlo-Bold"
 		statML.fontSize = 24
 		addChild(statML)
-		
+
 		statESF.position = CGPoint(x: 0, y: 125)
 		statESF.fontName = "Menlo-Bold"
 		statESF.fontSize = 24
 		addChild(statESF)
-		
+
 		statPSF.position = CGPoint(x: 0, y: 100)
 		statPSF.fontName = "Menlo-Bold"
 		statPSF.fontSize = 24
 		addChild(statPSF)
-		
+
 		statESH.position = CGPoint(x: 0, y: 75)
 		statESH.fontName = "Menlo-Bold"
 		statESH.fontSize = 24
 		addChild(statESH)
-		
+
 		statPSH.position = CGPoint(x: 0, y: 50)
 		statPSH.fontName = "Menlo-Bold"
 		statPSH.fontSize = 24
@@ -86,21 +86,21 @@ class DeathScene: SKScene {
 		BannerAD.rootViewController = controller
 		let request = GADRequest()
 		request.testDevices = [kGADSimulatorID, "17755764fa910e4757b4728865f6217b"]
-		
+
 		BannerAD.load(request)
 		view.addSubview(BannerAD)
-		
+
 	}
-	
+
 	func touchDownInMenuButton(atPoint pos : CGPoint) {
 		let menu = MenuScene(fileNamed: "MenuScene")
 		menu?.scaleMode = .aspectFill
 		self.view?.presentScene(menu!, transition: SKTransition.push(with: SKTransitionDirection.right, duration: 0.5))
 		BannerAD.removeFromSuperview()
 	}
-	
+
 	var activeTouches:[SKShapeNode:UITouch] = [:]
-	
+
 	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 		for touch in touches {
 			let location = touch.location(in: self)
@@ -110,9 +110,9 @@ class DeathScene: SKScene {
 			}
 		}
 	}
-	
+
 	override func update(_ currentTime: TimeInterval) {
-		
+
 		if (self.lastUpdateTime == 0) {
 			self.lastUpdateTime = currentTime
 		}
@@ -125,5 +125,3 @@ class DeathScene: SKScene {
 		self.lastUpdateTime = currentTime
 	}
 }
-
-
